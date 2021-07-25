@@ -1,4 +1,8 @@
 //https://www.amocrm.com/developers/content/crm_platform/leads-api/#leads-edit
+/**
+* Создаём бесплатный аккаунт на 2 недели и кидаем в консоль браузера
+*
+*/ 
 let data = {
     0: {
         "id": 24528107, // id lead сделки
