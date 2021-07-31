@@ -10,3 +10,6 @@ AMOCRM.data.current_card.id;
 
 // имя сущности
 AMOCRM.data.current_card.$name.text();
+
+// "Тип" сущности в которой сейчас находимся
+AMOCRM.data.current_entity 
