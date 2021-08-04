@@ -28,3 +28,48 @@ AMOCRM.data.current_card.$name.text();
 
 // "Тип" сущности в которой сейчас находимся
 AMOCRM.data.current_entity 
+
+// Пакетное редактирование полей карточек сущностей
+$.ajax({
+headers : {
+    'Content-Type' : 'application/json'
+},
+url : '/api/v4/companies',
+type : 'PATCH',
+data : JSON.stringify([
+    {
+        "id": 35789829,
+        "custom_fields_values": [
+            {
+                "field_id": 754949,
+                "values": [
+                    {
+                        "value": "Значение поля 11111"
+                    }
+                ]
+            }
+        ]
+    }
+])
+});
+
+// Пакетное редактирование кастомных полей карточки сущности 
+$.ajax({
+    headers : {
+        'Content-Type' : 'application/json'
+    },
+    url : '/api/v4/companies/48257265',
+    type : 'PATCH',
+    data : JSON.stringify({
+        "custom_fields_values": [
+            {
+                "field_id": 808057,
+                "values": [
+                    {
+                        "value": "Значение поля"
+                    }
+                ]
+            }
+        ]
+    })
+});
