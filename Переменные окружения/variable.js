@@ -73,3 +73,7 @@ $.ajax({
         ]
     })
 });
+
+
+// - на какой страничке мы сейчас
+AMOCRM.data.current_list.url
