@@ -18,4 +18,11 @@ public function getActiveLeadInPipeline ($entity, $pipeline_id)
     return $leads;
 }
 
-
+// получить любые активные сделки из одной воронки с определённым статусом
+public function getActiveLeadInStatus ($entity, $pipeline_id, $status_id) 
+{
+    $leads = $entity->leads->filter(function($lead) use (&$pipeline_id, &$status_id) {     
+        return $lead->pipeline_id == $pipeline_id && $lead->status_id == $status_id;
+    });
+    return $leads;
+}
