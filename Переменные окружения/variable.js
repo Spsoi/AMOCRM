@@ -1,5 +1,6 @@
 //https://www.amocrm.ru/developers/content/web_sdk/env_variables
 // получение карточек сущностей прикреплённых к сущности
+AMOCRM.isCard() // retrun true если мы в карточке
 AMOCRM.data.current_card.linked_forms.form_models.models; 
 
 //Забираем из Лида ИД компании
