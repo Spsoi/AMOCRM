@@ -26,3 +26,25 @@ public function getActiveLeadInStatus ($entity, $pipeline_id, $status_id)
     });
     return $leads;
 }
+
+// Добавляем в мультисписок только то что есть в мульттисписке.
+foreach ($this->amoCRM['payment']['products'] as $product) {
+            $value = $product['name'];
+            $enums = (array)$lead->cf()->byId(508239)->field->enums;
+            $validate = array_keys($enums, $value);
+                if ($validate) {
+                    $lead->cf()->byId(508239)->setValue($value);
+                }
+            if ($value == 'Все курсы Вольфсона') {
+                // $entityForm['508241'] = true;
+                $lead->cf()->byId(508239)->setValues(
+                ['Нескучная математика', 
+                'Нескучная алгебра',
+                'Нескучная геометрия',
+                'Олимпиадная математика',
+                'Олимпиадная математика: комбинаторика',
+                'Теория чисел',
+                'Азартная теория вероятностей',
+                ]);
+            }
+        }
