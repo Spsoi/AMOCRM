@@ -1,3 +1,5 @@
 Создать .htaccess в корне сайта (html, public_html и т.д)
 
 "composer update" в корне интеграции.
+
+Попросить настроить rewrite модуль.
