@@ -78,3 +78,4 @@ $.ajax({
 
 // - на какой страничке мы сейчас
 AMOCRM.data.current_list.url
+AMOCRM.data.current_entity - в какой области мы находимся
