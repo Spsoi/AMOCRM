@@ -8,6 +8,12 @@ use App\Jobs\ConnectsJob;
 
 class ConnectController extends \Core\Controllers\Controller
 {
+     public function __construct()
+    {
+    parent::__construct();
+    // $this->middleware('AllowOrigin', '*');
+    }
+
     public function load()
     {
         ajaxSuccess(true);
