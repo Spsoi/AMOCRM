@@ -1,0 +1,2 @@
+$rights = $amo->ajax()->get($url = '/api/v4/users?with=role');
+
