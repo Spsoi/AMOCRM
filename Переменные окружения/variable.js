@@ -15,7 +15,7 @@ if (AMOCRM.data.current_entity == 'leads') {
             id = carts[i].attributes["ID"];
             company_id  = id;
         }
-         if (carts[i].url == "/ajax/contacts/detail/") { // забираем ИД компании у сделки
+         if (carts[i].url == "/ajax/contacts/detail/") { // забираем ИД контакта у сделки
             id = carts[i].attributes["ID"];
             contact_id  = id;
         }
