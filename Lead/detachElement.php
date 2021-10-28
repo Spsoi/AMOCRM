@@ -18,3 +18,4 @@
         $entity->save();
         return $entity;
     }
+// Сейчас после первого прогона выдаёт 204, пофиксить в файле ufee/amoapi/src/Services/Ajax.php
