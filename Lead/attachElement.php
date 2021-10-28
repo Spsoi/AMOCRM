@@ -23,8 +23,7 @@
                 $this->l->log('нашли совпадения');
                 $this->l->log('$element->name', $element->name);
                 $this->l->log('$product->title', $product->title);
-                // $entity->attachElement($catalog_id, $element->id, $product->amount);
-                $entity->attachElement($catalog_id, $element->id, -1);
+                $entity->attachElement($catalog_id, $element->id, $product->amount);
 //                 Запишем ИД услуги АПИ в кастомное поле элемента в АМО
                 $elementAmo = $amo->catalogElements()->find($element->id);
                 $elementAmo->cf()->byId(681749)->setValue($product->id);
